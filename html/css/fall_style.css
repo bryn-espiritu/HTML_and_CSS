@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 body{
     background: #cccccc;
 }
@@ -11,36 +18,136 @@ h3{
 }
 /*Navigation Bar*/
 .navbar{
-    ;
-   list-style: none;
+    position: fixed;
     border-radius: 5px 5px 0 0;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 15px;
     background: #618685;
     overflow: auto;
     width: 100%;
 }
 
-.navbar li a{
+.nav-list{
+    max-width: 960px;
+    list-style: none;
+}
+
+.nav-logo{
+    color: #f4f4f4;
     float: left;
+    padding: 20px 25px;
+}
+.nav-list li a{
+    float: right;
     color: #cccccc;
     text-decoration: none;
     display: block ;
-    padding: 20px 25px;
+    padding: 25px 25px;
 }
-
 
 .a {
     color: #cccccc;
     display: block;
-    padding-left: 93%;
+    padding: 0 20px;
+}
+/* CONTAINER*/
+#container {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* FORM-WRAP */
+
+.form-wrap {
+    position: relative;
+    background: white;
+    margin-top: 60px;
+    padding: 15px 25px;
+    border-radius: 50px;
+}
+
+.form-wrap h1,
+.form-wrap p {
+    text-align: center;
+}
+
+.form-wrap .form-group {
+    margin-top: 15px;
+}
+
+.form-wrap .form-group label {
+    display: block;
+    color: black;
+
+}
+
+.form-wrap .form-group input {
+    width: 100%;
+    padding: 12px 5px;
+    border: #ddd 1px solid;
+    border-radius: 5px
+}
+
+.form-wrap button {
+    background: lightgreen;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: #f4f4f4;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+}
+
+.form-wrap button:hover {
+    background: cadetblue;
+}
+
+.form-wrap .bottom-text {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer a {
+    color: #618685;
 }
 
 /*image cover*/
-.cover{
+.cover {
     height: 750px;
     width: 100%;
-    display: inline;
+    display: inline-block;
+}
+
+#showcase .showcase-content {
+    color: white;
+    text-align: center;
+    padding-top: 170px;
+}
+
+#showcase .showcase-content h1 {
+    color: #333333;
+    font-size: 60px;
+    line-height: 1.2em;
+}
+
+#showcase .showcase-content p {
+    color: #333333;
+    padding-bottom: 20px;
+    line-height: 1.7em;
+
+.card img{
+    height: 200px;
+    width: 400px;
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 /* card */
@@ -71,3 +178,8 @@ h3{
     background: #618685;
     transition: 0.1ms;
 }
+
+ p a:active{
+    color: dodgerblue;
+}
+
