@@ -3,31 +3,150 @@
     padding: 0;
     box-sizing: border-box;
     max-width: 100%;
+    text-decoration: none;
 }
 
 body{
     background: #cccccc;
 }
-/*font of the page*/
-.font{
+/*font/color/size of the page*/
+
+h1, h2, h3{
+    padding-bottom: 20px;
+}
+
+.txt-fall{
+    color: #b5e7a0;
+    text-shadow: 2px 2px #618685;
+    font-family: 'Silom', sans-serif;
+}
+.nav-list li{
     font-family: 'Roboto', sans-serif;
 }
 
-h3{
+.clr{
+    clear: both;
+}
+
+.font{
+    font-family: 'Roboto', sans-serif;
+}
+.head-font{
     font-family: 'Silom', sans-serif;
 }
+
+.lead{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.lux{
+    color: #618685;
+    text-shadow: 1px 1px #b5e7a0;
+}
+
+.spd{
+    color: #d64161;
+    text-shadow: 2px 2px #ff7b25;
+}
+
+.bg-fall{
+    background: #618685;
+    color: #f4f4f4;
+}
+
+.bg-spd{
+    color: #f4f4f4;
+    background: linear-gradient(#ff7b25, #d64161);
+}
+
+.bg-lux{
+    color: #333333;
+    background: linear-gradient(#b5e7a0, #618685);
+}
+
+.btn-fall{
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    background: #618685;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-spd{
+    background: #feb236;
+    color: #f4f4f4;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-lux{
+    background: #b5e7a0;
+    color: #333333;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Hover*/
+.navbar li a:hover{
+    background-color: #618685;
+    color: #f4f4f4;
+    transition: 0.8s;
+}
+
+.box:hover{
+    background: #d5f4e6;
+    transition: 0.15s;
+}
+
+.btn-fall:hover{
+    border-radius: 10px;
+    transition: 2s;
+    background: #feb236;
+}
+
+.btn-spd:hover{
+    background: #618685;
+    color: #f4f4f4;
+}
+
+.btn-lux:hover{
+    background: #feb236;
+    color: #f4f4f4;
+}
+/* activate */
+
+.navbar li a:active{
+    background: #feb236;
+    transition: 0.1ms;
+}
+
+p a:active{
+    color: dodgerblue;
+}
+
+
 /*Navigation Bar*/
 .navbar{
     position: fixed;
     border-radius: 5px 5px 0 0;
     margin-bottom: 15px;
-    background: #618685;
+    background: linear-gradient(#618685, #b5e7a0);
     overflow: auto;
     width: 100%;
 }
 
+.nav-container .s-container{
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 10px;
+}
+
 .nav-list{
-    max-width: 960px;
     list-style: none;
 }
 
@@ -36,9 +155,13 @@ h3{
     float: left;
     padding: 20px 25px;
 }
+
+.nav-logo h2{
+    font-family: 'Roboto', sans-serif;
+}
 .nav-list li a{
     float: right;
-    color: #cccccc;
+    color: #333333;
     text-decoration: none;
     display: block ;
     padding: 25px 25px;
@@ -54,6 +177,18 @@ h3{
     margin: 0 auto;
     max-width: 400px;
     padding: 20px;
+}
+
+/* CARD */
+.card{
+    float: left;
+    width: 33%;
+    padding: 50px;
+    text-align: center;
+}
+
+.card i{
+    margin-bottom: 10px;
 }
 
 /* FORM-WRAP */
@@ -78,7 +213,6 @@ h3{
 .form-wrap .form-group label {
     display: block;
     color: black;
-
 }
 
 .form-wrap .form-group input {
@@ -118,68 +252,79 @@ footer a {
     color: #618685;
 }
 
-/*image cover*/
-.cover {
-    height: 750px;
-    width: 100%;
-    display: inline-block;
+/* showcase*/
+.showcase{
+    background: url('../img/cars/cover_car.jpg') no-repeat center center/cover;
+    height: 600px;
 }
 
-#showcase .showcase-content {
+.showcase .showcase-content{
     color: white;
     text-align: center;
     padding-top: 170px;
 }
 
-#showcase .showcase-content h1 {
-    color: #333333;
+.showcase .showcase-content h1{
     font-size: 60px;
     line-height: 1.2em;
 }
 
-#showcase .showcase-content p {
-    color: #333333;
+.showcase .showcase-content p{
     padding-bottom: 20px;
-    line-height: 1.7em;
-
-.card img{
-    height: 200px;
-    width: 400px;
-    margin: 10px;
-    padding: 5px;
-    box-sizing: border-box;
+    line-height: 1.5em;
 }
 
-/* card */
-.card{
-    box-sizing: border-box;
+/* SECTION */
+#home-info{
+    height: 500px;
+}
+
+#home-info .info-img{
+    float: left;
+    width: 50%;
+    background: url("../img/cars/car2.jpg") no-repeat center center/cover;
+    min-height: 100%;
+}
+
+#home-info .info-content{
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 40px;
+    overflow: hidden;
+}
+
+#home-info .info-content p{
+    padding-bottom: 30px;
+}
+
+/* box */
+.box{
+    float: left;
     width: 24.8%;
     background: #b1cbbb;
     padding: 20px;
-    margin-bottom: 15px ;
     display: inline-block;
+    overflow: hidden;
+}
+.box img{
+    height: 500px;
+    width: 600px;
 }
 
-/*Hover*/
-.navbar li a:hover{
-    background-color: #36486b;
-    color: white;
-    transition: 0.8s;
+.box p{
+    padding: 20px;
 }
 
-.card:hover{
-   background: #d5f4e6;
-    transition: 0.15s;
+.box h3{
+    text-align: center;
 }
 
-/* activate */
-
-.navbar li a:active{
+/* FOOTER */
+#main-footer{
+    text-align: center;
     background: #618685;
-    transition: 0.1ms;
+    color: #f4f4f4;
+    padding: 20px;
 }
-
- p a:active{
-    color: dodgerblue;
-}
-
