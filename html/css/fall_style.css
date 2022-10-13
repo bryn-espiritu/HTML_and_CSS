@@ -9,6 +9,12 @@
 body{
     background: #cccccc;
 }
+
+.py-1 {padding: 10px 0;}
+.py-2 {padding: 20px 0;}
+.py-3 {padding: 30px 0;}
+
+
 /*font/color/size of the page*/
 
 h1, h2, h3{
@@ -298,6 +304,31 @@ footer a {
 #home-info .info-content p{
     padding-bottom: 30px;
 }
+
+/* ABOUT */
+.abt-margin{
+    padding: 90px 0 20px 0;
+}
+#abt-info .info-right{
+    float: right;
+    width: 50%;
+    min-height: 100%;
+}
+
+#abt-info .info-right img{
+   display: block;
+    margin: auto;
+    width: 70%;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+#abt-info .info-left{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
 
 /* box */
 .box{
