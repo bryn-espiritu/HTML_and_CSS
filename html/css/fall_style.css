@@ -7,13 +7,16 @@
 }
 
 body{
-    background: #cccccc;
+    font-family: 'Roboto', sans-serif;
 }
 
 .py-1 {padding: 10px 0;}
 .py-2 {padding: 20px 0;}
 .py-3 {padding: 30px 0;}
 
+.font-size-30 {font-size: 30px;}
+.font-size-40 {font-size: 40px;}
+.font-size-50 {font-size: 50px;}
 
 /*font/color/size of the page*/
 
@@ -26,19 +29,12 @@ h1, h2, h3{
     text-shadow: 2px 2px #618685;
     font-family: 'Silom', sans-serif;
 }
-.nav-list li{
-    font-family: 'Roboto', sans-serif;
-}
+
+.head-font{ font-family: 'Silom', sans-serif;}
+
 
 .clr{
     clear: both;
-}
-
-.font{
-    font-family: 'Roboto', sans-serif;
-}
-.head-font{
-    font-family: 'Silom', sans-serif;
 }
 
 .lead{
@@ -98,7 +94,7 @@ h1, h2, h3{
 }
 
 /*Hover*/
-.navbar li a:hover{
+#navbar li a:hover{
     background-color: #618685;
     color: #f4f4f4;
     transition: 0.8s;
@@ -126,7 +122,7 @@ h1, h2, h3{
 }
 /* activate */
 
-.navbar li a:active{
+#navbar li a:active{
     background: #feb236;
     transition: 0.1ms;
 }
@@ -137,10 +133,8 @@ p a:active{
 
 
 /*Navigation Bar*/
-.navbar{
-    position: fixed;
-    border-radius: 5px 5px 0 0;
-    margin-bottom: 15px;
+#navbar{
+    position: sticky;
     background: linear-gradient(#618685, #b5e7a0);
     overflow: auto;
     width: 100%;
@@ -152,20 +146,20 @@ p a:active{
     padding: 0 10px;
 }
 
-.nav-list{
+#navbar .nav-list{
     list-style: none;
 }
 
-.nav-logo{
+#navbar .nav-logo{
     color: #f4f4f4;
     float: left;
     padding: 20px 25px;
 }
 
-.nav-logo h2{
+#navbar .nav-logo h2{
     font-family: 'Roboto', sans-serif;
 }
-.nav-list li a{
+#navbar .nav-list li a{
     float: right;
     color: #333333;
     text-decoration: none;
@@ -183,18 +177,6 @@ p a:active{
     margin: 0 auto;
     max-width: 400px;
     padding: 20px;
-}
-
-/* CARD */
-.card{
-    float: left;
-    width: 33%;
-    padding: 50px;
-    text-align: center;
-}
-
-.card i{
-    margin-bottom: 10px;
 }
 
 /* FORM-WRAP */
@@ -249,15 +231,6 @@ p a:active{
     margin-top: 20px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 10px;
-}
-
-footer a {
-    color: #618685;
-}
-
 /* showcase*/
 .showcase{
     background: url('../img/cars/cover_car.jpg') no-repeat center center/cover;
@@ -282,18 +255,17 @@ footer a {
 
 /* SECTION */
 #home-info{
-    height: 500px;
+    display: flex;
+    height: 600px;
 }
 
 #home-info .info-img{
-    float: left;
     width: 50%;
     background: url("../img/cars/car2.jpg") no-repeat center center/cover;
     min-height: 100%;
 }
 
 #home-info .info-content{
-    float: right;
     width: 50%;
     height: 100%;
     text-align: center;
@@ -306,9 +278,6 @@ footer a {
 }
 
 /* ABOUT */
-.abt-margin{
-    padding: 90px 0 20px 0;
-}
 #abt-info .info-right{
     float: right;
     width: 50%;
@@ -329,19 +298,87 @@ footer a {
     height: 100%;
 }
 
+/* TESTIMONIAL */
+#testimonials{
+    height: 800px;
+    background: url("../img/cars/car2.jpg") no-repeat center center/cover;
+    padding-top: 100px;
+}
+
+#testimonials h2{
+    color: #333333;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#testimonials .testimonial img{
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #618685;
+}
+
+#testimonials .testimonial{
+    padding: 40px 20px;
+    margin: 30px 80px 40px;
+    border-radius: 10px;
+    opacity: 0.9;
+
+}
+
+/*Contact Form */
+#contact-form{
+ margin: 0 30px;
+}
+
+#contact-form .form-group{
+    margin-bottom: 20px;
+}
+
+#contact-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea{
+     width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px #ddd solid;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus{
+    outline: none;
+    border-color: #618685;
+}
+
+#contact-form textarea {
+height: 140px;
+}
+
 
 /* box */
+
+#box{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
 .box{
-    float: left;
-    width: 24.8%;
     background: #b1cbbb;
     padding: 20px;
-    display: inline-block;
-    overflow: hidden;
+    flex:  0 0 25%;
+    border: 3px solid #feb236;
+    text-align: center;
 }
 .box img{
+    object-fit: cover;
     height: 500px;
-    width: 600px;
+    width: 500px;
+
 }
 
 .box p{
@@ -352,6 +389,28 @@ footer a {
     text-align: center;
 }
 
+/* CARD */
+
+#card{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.card{
+    height: 300px;
+    width: 300px;
+    padding: 60px;
+    text-align: center;
+    flex:  0 0 33.333333%;
+}
+
+.card i{
+    margin-bottom: 20px;
+}
+
+
+
 /* FOOTER */
 #main-footer{
     text-align: center;
@@ -359,3 +418,18 @@ footer a {
     color: #f4f4f4;
     padding: 20px;
 }
+
+
+footer {
+    text-align: center;
+    position: relative;
+    bottom: 100%;
+}
+
+footer a {
+    color: #618685;
+}
+
+
+
+
