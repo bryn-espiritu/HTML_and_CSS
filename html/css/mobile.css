@@ -60,12 +60,10 @@
 }
 
 /* ABOUT Selection */
-#abt-info .info-right,
-#abt-info .info-left{
-    background: #b1cbbb;
-    float: none;
-    width: 100%;
+#abt-info #info{
+    flex-direction: column-reverse;
 }
+
 
 .info-left h1{
     text-align: center;
@@ -73,23 +71,26 @@
 
 /* TESTIMONIAL */
 #testimonials{
-    height: auto;
+    height: 0;
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
-
 }
 
 #testimonials .testimonial{
-    flex:  0 0 33.333333%;
-    padding: 40px 20px;
-    margin: 40px 800px 50px;
+    /*flex:  0 0 33.333333%;*/
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 0;
 }
 
-#testimonials{
-    margin-bottom: 800px;
+#testimonials .testimonial p{
+    text-align: center;
 }
+
 
 .py-2{
     display: none;
 }
+
+
